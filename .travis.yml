@@ -14,16 +14,16 @@ matrix:
       env:
         - BUILD_ENV="CC=gcc-7 && CXX=g++-7"
         - QBDI_PLATFORM="linux-X86_64"
-        - CMAKE_DOWNLOAD="https://cmake.org/files/v3.9/cmake-3.9.4-Linux-x86_64.tar.gz"
+        - CMAKE_DOWNLOAD="https://cmake.org/files/v3.12/cmake-3.12.0-Linux-x86_64.tar.gz"
         - CMAKE_BIN="cmake-3.9.4-Linux-x86_64/bin/"
         - CMAKE_ARGS="-DCMAKE_BUILD_TYPE=Release -DCMAKE_CROSSCOMPILING=FALSE -DPLATFORM=${QBDI_PLATFORM} -DFORCE_DISABLE_AVX=TRUE"
 
     - os: osx
-      osx_image: xcode9.1
+      osx_image: xcode9.4
       env:
         - BUILD_ENV=""
         - QBDI_PLATFORM="macOS-X86_64"
-        - CMAKE_DOWNLOAD="https://cmake.org/files/v3.9/cmake-3.9.4-Darwin-x86_64.tar.gz"
+        - CMAKE_DOWNLOAD="https://cmake.org/files/v3.12/cmake-3.12.0-Darwin-x86_64.tar.gz"
         - CMAKE_BIN="cmake-3.9.4-Darwin-x86_64/bin/"
         - CMAKE_ARGS="-DCMAKE_BUILD_TYPE=Release -DCMAKE_CROSSCOMPILING=FALSE -DPLATFORM=${QBDI_PLATFORM} -DFORCE_DISABLE_AVX=TRUE"
 
